@@ -1,0 +1,25 @@
+{
+    "returnCode": "0",
+    "returnMessage": "ok",
+    "bean": {
+        "total": 2
+    },
+    "beans": [
+        {
+            "text": "todos",
+            "isCheck": true
+        },
+        {
+            "text": "todos-one",
+            "isCheck": false
+        },
+        {
+            "text": "todos-two",
+            "isCheck": true
+        },
+        {
+            "text": "todos-three",
+            "isCheck": true
+        }
+    ]
+}

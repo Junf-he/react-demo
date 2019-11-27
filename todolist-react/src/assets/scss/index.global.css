@@ -1,0 +1,847 @@
+/* reset */
+html, input { margin: 0; padding: 0; }
+body { background: #FFF; line-height: 1.4; color: #111; font-size: 12px; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }
+input, select, textarea { font-size: 100%; }
+input:focus, select:focus, textarea:focus { outline: none; }
+body, form, h1, h2, h3, h4, h5, h6, ol, p, ul { margin: 0; }
+h4, h5, h6 { font-size: 1em; }
+ol, ul { padding-left: 0; list-style-type: none; }
+th, td { padding: 0; }
+img, iframe { border: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+a { text-decoration: none; outline: none; }
+* { box-sizing: border-box; }
+input::-ms-clear, input::-ms-reveal { display: none; }
+.wb-clearfix:after{
+  content: "";
+  clear: both;
+  height: 0;
+  display: table;
+  overflow: hidden;
+}
+.ant-message {
+  z-index:1100;
+}
+.view-panel-box .dataView .dataItem > div input.err,
+.pageEdit ul li input.err {
+  border: 1px solid #ffa39e;
+}
+.view-panel-box .dataView .dataItem .errTips,
+.pageEdit ul li .errTips{
+  position: absolute;
+    top: -28px;
+    border: 1px solid #ffa39e;
+    line-height: 14px;
+    background: #fff1f0;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+/*头部样式*/
+.wb-head{
+  background:#1a1f20;
+  height: 45px;
+}
+/*logo*/
+.wb-head .logo {
+  font-size: 16px;
+  font-weight: bold;
+  width: 60px;
+  height: 100%;
+  background: #000;
+  color: #afafaf;
+  line-height: 45px;
+  text-align: center;
+  float: left;
+}
+/*头部菜单*/
+.wb-head .menu {
+  float: left;
+  color: #afafaf;
+  height: 100%;
+  padding-left: 20px;
+}
+.wb-head .menu span {
+  font-size: 14px;
+  display: inline-block;
+  height: 100%;
+  line-height: 45px;
+  padding-right: 10px;
+}
+#root .wb-head .header-btn {
+  float: right;
+  padding-right: 20px;
+  line-height: 45px;
+}
+.wb-head .header-btn .iconfont {
+  font-size: 14px;
+}
+.wb-head .header-btn button {
+  width: 90px;
+  height: 30px;
+  background: transparent;
+  border:  1px solid #afafaf;
+  color: #afafaf;
+  border-radius: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  outline: none;
+  line-height: normal;
+}
+.wb-head .header-btn button span{
+  margin-left: 7px;
+}
+
+/*内容区域*/
+.wb-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 45px;
+}
+/*侧边栏*/
+.wb-body .tool-bar-box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 60px;
+  padding-top: 15px;
+  background:#363c3d;
+}
+
+.wb-body .tool-bar-box span.iconfont {
+  font-size: 30px;
+  color: #afafaf;
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  cursor:pointer;
+}
+.wb-body .tool-bar-box .iconfont.active {
+  color: #33a0ff;
+}
+/*左侧面板*/
+.wb-body .ex-panel-box {
+  display:block;
+  position: absolute;
+  left: 60px;
+  bottom: 0;
+  top: 0;
+  width: 260px;
+  background: #f1f1f1;
+  color: #646464;
+}
+.wb-body.window .ex-panel-box {
+  display:none;
+}
+/* panel 样式 */
+.ex-panel-box .panel {
+  height: 30px;
+  position: relative;
+}
+.ex-panel-box .panel-header {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  color: #323232;
+  background-color: #ddd;
+  padding-left: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: absolute;
+}
+.ex-panel-box .panel-header .title {
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+.ex-panel-box .panel-header .actions {
+  float: right;
+}
+.ex-panel-box .panel-header .actions .iconfont {
+  font-size: 12px;
+  margin-right: 10px;
+}
+.ex-panel-box .panel-body {
+  height: 100%;
+  padding-top: 30px;
+}
+.ex-panel-box .panel-body .content {
+  height: 100%;
+  /* padding-top: 20px; */
+  overflow: auto;
+}
+/*页面面板*/
+.ex-panel-box .PagesPanel.expanded{
+  height: 60%;
+}
+.ex-panel-box .PagesPanel .panel-body .content {
+  padding: 10px 20px;
+}
+.ex-panel-box .PagesPanel .rc-tree li .draggable {
+  color: #646464;
+}
+.ex-panel-box .PagesPanel .rc-tree li,
+.ex-panel-box .PagesPanel .rc-tree li ul {
+  padding-top: 2px;
+}
+.ex-panel-box .PagesPanel .rc-tree li span.rc-tree-switcher,
+.ex-panel-box .PagesPanel .rc-tree li span.rc-tree-checkbox,
+.ex-panel-box .PagesPanel .rc-tree li span.rc-tree-iconEle {
+  vertical-align: inherit;
+}
+.ex-panel-box .PagesPanel .rc-tree .rc-tree-node-selected .rc-tree-title {
+  font-weight: bold;
+  color: #333;
+}
+/*状态面板*/
+.ex-panel-box .StatePanel {
+  height: 40%;
+}
+.ex-panel-box .StatePanel .statePanel {
+  padding-top: 20px;
+}
+.ex-panel-box .StatePanel .stateItem {
+  text-align: center;
+}
+.ex-panel-box .StatePanel .name {
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  background: #fff;
+  color: #646464;
+  border: 1px solid #646464;
+  border-radius: 15px;
+  outline: none;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+.ex-panel-box .StatePanel .stateItem.active .name {
+  background:#646464;
+  color: #fff;
+}
+.ex-panel-box .StatePanel .line {
+  width: 1px;
+  height: 12px;
+  border-left: 1px solid #e1e1e1;
+  margin: 0 auto;
+}
+.ex-panel-box .StatePanel .line.last {
+  height: 20px;
+}
+
+/*组件面板和物料面板*/
+.ex-panel-box .ComponentsPanel.expanded,
+.ex-panel-box .FragmentPanel.expanded{
+  height: 50%;
+}
+.ex-panel-box .ComponentsPanel .comptsGroup,
+.ex-panel-box .FragmentPanel .fragmentsGroup{
+  border-bottom: 1px solid #c7c7c7;
+}
+.ex-panel-box .ComponentsPanel .comptsGroup:last-child,
+.ex-panel-box .FragmentPanel .fragmentsGroup:last-child{
+  border-bottom: none;
+}
+.ex-panel-box .ComponentsPanel .comptsGroup .iconfont,
+.ex-panel-box .FragmentPanel .fragmentsGroup .iconfont {
+  font-size: 12px;
+  font-weight: 600;
+}
+.ex-panel-box .ComponentsPanel .comptsGroup>div,
+.ex-panel-box .FragmentPanel .fragmentsGroup>div{
+  height:40px;
+  line-height: 40px;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.ex-panel-box .ComponentsPanel .comptsGroup ul,
+.ex-panel-box .FragmentPanel .fragmentsGroup ul{
+  padding: 5px 15px;
+}
+.ex-panel-box .ComponentsPanel .comptsGroup li,
+.ex-panel-box .FragmentPanel .fragmentsGroup li {
+  width: 33.3333%;
+  height: 60px;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 8px;
+}
+.ex-panel-box .ComponentsPanel .comptsGroup li>i.iconfont,
+.ex-panel-box .FragmentPanel .fragmentsGroup li>i.iconfont {
+  font-size: 20px;
+}
+.ex-panel-box .ComponentsPanel .comptsGroup li>.comptsBg,
+.ex-panel-box .FragmentPanel .fragmentsGroup li>.comptsBg{
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  /* border:1px solid #ddd; */
+}
+.ex-panel-box .ComponentsPanel .comptsGroup li>p,
+.ex-panel-box .FragmentPanel .fragmentsGroup li>p{
+  line-height: 24px;
+}
+/*状态树面板*/
+.ex-panel-box .ViewTreePanel.expanded{
+  height: 100%;
+}
+.ex-panel-box .ViewTreePanel.expanded table {
+  min-width: 100%;
+  table-layout: fixed;
+}
+.ex-panel-box .ViewTreePanel.expanded table td{
+  height: 30px;
+  border: 1px solid #d8d8d8;
+  padding-right: 5px;
+  color: #333;
+}
+.ex-panel-box .ViewTreePanel.expanded table td.object.hasChild {
+  font-weight: bold;
+}
+.ex-panel-box .ViewTreePanel.expanded table td.object .iconfont {
+  display: inline-block;
+  font-size: 14px;
+  color: #6d6d6d;
+  cursor: pointer;
+}
+.ex-panel-box .ViewTreePanel.expanded table td.object .iconfont span {
+  color: #333;
+}
+.ex-panel-box .ViewTreePanel.expanded table td.class {
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+
+.wb-body .view-panel-box {
+  position: absolute;
+  left: 320px;
+  bottom: 0;
+  top: 0;
+  right: 0;
+}
+
+.wb-body.window .view-panel-box {
+  left: 60px;
+}
+
+.canvas {
+  position: absolute;
+  left: 0;
+  right: 350px;
+  top: 0;
+  bottom: 0;
+  padding: 20px;
+  border-right: 1px solid #f1f1f1;
+  overflow: auto;
+  background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKAQMAAAC3/F3+AAAABlBMVEX////x8fEm2djvAAAAD0lEQVQI12NgcMCJ/h8AACbcBAD5A1SjAAAAAElFTkSuQmCC')
+}
+.canvasClassBox{
+  border: 1px none #111;
+  position: relative;
+  display: inline-block;
+  /* padding: 10px; */
+  /* margin: 5px; */
+}
+.canvasClassBox.isDrag .canvasClassBox .left.isDrag,
+.canvasClassBox.isDrag .canvasClassBox .top.isDrag {
+  display: none;
+}
+/* .canvasClassBox> .children {
+  width: 100%;
+  height: 100%;
+} */
+.canvasClassBox.hover{
+  border-color:red
+}
+.canvasClassBox.active{
+  border-color:red
+}
+.canvasClassBox .title{
+  display: none;
+  position: absolute;
+  top:-10px;
+  left: 0;
+  padding: 5px;
+  background: red;
+  color: #FFF;
+  font-size: 14px;
+}
+.canvasClassBox .del{
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: -8px;
+    background: #fff;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+}
+.canvasClassBox.active>.title,.canvasClassBox.active>.del{
+  display: block;
+}
+.canvasClassBox > .top{
+  display: none;
+  height: 18px;
+  width: 100%;
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+.canvasClassBox > .top.active:before{
+  content: "";
+  display:"block";
+  width: 100%;
+  border-top: 1px solid red;
+  position: absolute;
+  top: 9px;
+}
+.canvasClassBox > .left{
+  display: none;
+  height: 100%;
+  width: 18px;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+.canvasClassBox > .left.active:before{
+  content: "";
+  display:"block";
+  height: 100%;
+  border-left: 1px solid red;
+  position: absolute;
+  left: 9px;
+}
+.canvasClassBox > .top.isDrag,
+.canvasClassBox > .left.isDrag{
+  display: block;
+}
+/*组件属性面板*/
+.contral,
+.contral .card-container{
+  height: 100%;
+}
+.contral {
+  float: right;
+  position: relative;
+}
+.contral.pageEdit,
+.contral.comptsEdit{
+  width: 350px;
+}
+.contral .card-container{
+  background: #f1f1f1;
+}
+.card-container.ant-tabs-card > .ant-tabs-content {
+  height: 100%;
+  /* position:absolute;
+  top: 0;
+  padding-top: 40px; */
+  margin-top: -16px;
+}
+.card-container.ant-tabs-card .ant-tabs-nav {
+  width: 100%;
+}
+.card-container.ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane-active{
+  height: 100%;
+}
+.card-container.ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane {
+  /* height: 100%; */
+  background: #f1f1f1;
+  padding: 16px;
+  overflow: auto;
+  position: absolute;
+  padding-top: 56px;
+  top: 0;
+}
+
+.card-container.ant-tabs-card > .ant-tabs-bar {
+  border-color: #f1f1f1;
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  background: #c6c6c6;
+}
+
+.card-container.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+  background: transparent;
+  margin-right: 0;
+  border: none;
+  width: 50%;
+}
+
+.card-container.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+  border-color: #f1f1f1;
+  background: #f1f1f1;
+}
+
+.card-container .events {
+  text-align: center;
+}
+.card-container .events .eventItems {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #d8d8d8;
+  text-align: left;
+}
+.card-container .events .eventItems li {
+  text-align: center;
+  width: 25%;
+  float: left;
+  color: #969696;
+  cursor: pointer;
+}
+.card-container .events .eventItems li p {
+  font-size: 12px;
+}
+/*数据页面*/
+.dataView {
+  height: 100%;
+  position: relative;
+}
+.dataView_header {
+  padding: 3px 0 3px 15px;
+  background-color: #DDD;
+  line-height: 26px;
+  font-weight: bolder;
+}
+.dataView_buttonGroup {
+  line-height: 50px;
+  padding-left: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.dataView_button {
+  display: inline-block;
+  line-height: 20px;
+  padding: 2px 23px;
+  border: 1px solid #C3C3C3;
+  border-radius: 14px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.dataView_button.active{
+  color: #fff;
+  background: #646464;
+}
+.dataView_button.newAdd{
+  color:#fff;
+  background-color: #33A0FF;
+  border: 1px solid #33A0FF;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  float: right;
+  margin: 11px 50px;
+}
+.dataView_content {
+  margin-top: 83px;
+  position: absolute;
+  left: 0;
+  right:0;
+  top: 0;
+  bottom: 0;
+  z-index:2;
+}
+.dataTable {
+  width: 66%;
+  height: 100%;
+  float: left;
+  background-color: #F1F1F1;
+  border-right: 1px solid #DADADA;
+  padding: 24px;
+}
+.dataPanel {
+  width: 34%;
+  float: left;
+  background-color: #E8E8E8;
+}
+.pannel-table {
+  width: 100%;
+  border-spacing: 0;
+  border:1px solid #D8D8D8
+}
+table.pannel-table tr {
+  border-bottom: 1px solid #D8D8D8;
+  background-color: #fff;
+}
+table.pannel-table tr:first-of-type {
+  background-color: #F3F3F3;
+} 
+table.pannel-table td{
+  border-right: 1px solid #D8D8D8;
+  border-bottom: 1px solid #D8D8D8;
+  padding: 5px;
+  line-height: 24px;
+}
+table.pannel-table td a{
+  color:#34A1FF;
+  cursor: pointer;
+  margin-left: 10px;
+}
+table.pannel-table tr td:last-child{ border-right: 0 }
+table.pannel-table tr:last-child td{ border-bottom: 0 }
+
+/*添加数据面板*/
+.view-panel-box .dataView .dataPanel {
+    height: 100%;
+    padding: 30px;
+    color: #333;
+}
+.view-panel-box .dataView .panelTitle {
+    padding-bottom: 15px;
+}
+.view-panel-box .dataView .dataItem {
+    width: 100%;
+    height: 45px;
+}
+.view-panel-box .dataView .dataItem label {
+    display: block;
+    width: 18%;
+    height: 100%;
+    line-height: 42px;
+    text-align: right;
+    float: left;
+}
+.view-panel-box .dataView .dataItem > div {
+    width: 78%;
+    height: 100%;
+    margin-left: 4%;
+    float: left;
+    position: relative;
+}
+.view-panel-box .dataView .dataItem > div input,
+.view-panel-box .dataView .dataItem > div ul {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 3px;
+}
+.view-panel-box .dataView .dataItem > div input {
+    padding: 0 5px;
+}
+.view-panel-box .dataView .dataItem > div ul li {
+    width: 60px;
+    height: 100%;
+    color: #646464;
+    background: #fff;
+    border-radius: 3px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+.view-panel-box .dataView .dataItem > div ul li.active {
+    background: #646464;
+    color: #fff;
+}
+.view-panel-box .dataView .dataItem.botton {
+    margin-top: 40px;
+}
+/* 包含data弹窗页面的button按钮*/
+.view-panel-box .dataView .dataItem > div button,
+button.btn {
+    min-width: 90px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 3px;
+    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+}
+/* 包含data弹窗页面的button按钮*/
+.view-panel-box .dataView .dataItem > div .confirm,
+button.btn-default {
+    color: #fff;
+    background: #33a0ff;
+}
+/* 包含data弹窗页面的button按钮*/
+.view-panel-box .dataView .dataItem > div .reset,
+.view-panel-box .dataView .dataItem > div .newAdd,
+button.btn-primary{
+    color: #646464;
+    background: #fff;
+}
+.rc-dialog  .rc-dialog-close,
+.rc-dialog  .rc-dialog-close span{
+  outline: none;
+}
+/* 包含data弹窗页面的button按钮*/
+.rc-dialog-footer > button.btn-primary {
+  border: 1px solid #DDD;
+}
+.view-panel-box .dataView .dataItem .dataItem_url{
+    width: 76%;
+    float: left;
+}
+.view-panel-box .dataView .dataItem .dataItem_button {
+    width: 20%;
+    float: right;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/*选择url弹窗样式*/
+.chooseUrl .rc-dialog-body {
+  padding: 30px;
+}
+.chooseUrl .rc-dialog-body ul li,
+.chooseUrl .rc-dialog-body ul li label,
+.chooseUrl .rc-dialog-body ul li div {
+  float: left;
+}
+.chooseUrl .rc-dialog-body ul li {
+  margin-right: 2%;
+  line-height: 30px;
+  padding-bottom: 30px;
+}
+.chooseUrl .rc-dialog-body ul li label {
+  color: #323232;
+  width: 25%;
+  margin-right: 2%;
+  text-align: right;
+  line-height: 30px;
+}
+.chooseUrl .rc-dialog-body ul li div {
+  width: 73%;
+  line-height: 30px;
+}
+.chooseUrl .rc-dialog-body ul li div input {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #D8D8D8;
+  border-radius: 3px;
+}
+.chooseUrl .rc-dialog-body ul li.interfaceName {
+  width: 30%;
+}
+.chooseUrl .rc-dialog-body ul li.interfaceUrl {
+  width: 43%;
+}
+.chooseUrl .rc-dialog-body ul li.search {
+  width: 21%;
+}
+.chooseUrl .rc-dialog-body ul li.search button {
+  width: 90px;
+  height: 30px;
+  color: #fff;
+  background-color: #33A0FF;
+  border: 1px solid #33A0FF;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+.chooseUrl .rc-dialog-content button.rc-dialog-close {
+  font-size: 34px;
+  font-weight: 500;
+}
+.chooseUrl .rc-dialog-header .rc-dialog-title {
+  font-size: 20px;
+}
+/* 页面编辑弹窗 */
+.pageEdit .rc-dialog-body {
+    padding-top: 60px;
+}
+.pageEdit ul li {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 20px;
+}
+.pageEdit ul li > label{
+    display: inline-block;
+    width: 22%;
+    font-size: 14px;
+    text-align: right;
+    margin-right: 2%;
+}
+.pageEdit ul li > div {
+  width: 60%;
+  position: relative;
+  display: inline-block;
+}
+.pageEdit ul li input {
+    width: 100%;
+    outline: none;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding-left: 6px;
+}
+.contral.pageEdit{
+  padding-top: 20px;
+  background-color: #E8E8E8;
+}
+.contral.pageEdit h3 {
+  padding: 0 0 15px 15px;
+}
+.contral.pageEdit ul {
+  padding-left: 15px;
+}
+.contral.pageEdit input {
+  border: none;
+}
+.contral.pageEdit label{
+  font-size: 12px;
+}
+.comptsProps ul > li {
+  line-height: 42px;
+  box-sizing: border-box;
+}
+.comptsProps ul > li > label {
+    display: inline-block;
+    width: 25%;
+    margin-right: 14px;
+    text-align: right;
+    overflow: hidden;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* .comptsProps ul > li > label:hover{
+    overflow: visible;
+ 	  text-overflow: inherit;	
+ } */
+.comptsProps ul > li > input {
+  width: 70%;
+  height: 30px;
+  outline: none;
+  border: 1px solid #d9d9d9;
+  padding: 0px 10px;
+}
+.comptsProps ul > li > input.url {
+  width: 52%;
+}
+.comptsProps ul > li >.btnUrl {
+  min-width: auto;
+  margin-right:0;
+  margin-top: 5px;
+  padding: 0 10px;
+  float: right;
+}
+.comptsProps ul > li > ul > li {
+    padding-left: 18%;
+}
+.comptsProps ul > li > ul > li > input {
+    width: 70%;
+}
+.comptsProps ul > li div.ant-select {
+  width: 70%;
+}
+/* 右侧面板开始时显示方格背景 */
+.control_bg {
+  float: none;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKAQMAAAC3/F3+AAAABlBMVEX////x8fEm2djvAAAAD0lEQVQI12NgcMCJ/h8AACbcBAD5A1SjAAAAAElFTkSuQmCC')
+}
+/* 事件弹窗回显数据样式 */
+.event_args {
+  line-height: 32px;
+}

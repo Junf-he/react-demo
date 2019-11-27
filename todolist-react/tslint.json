@@ -1,0 +1,108 @@
+{
+  "defaultSeverity": "error",
+  "autoFixOnSave":true,
+  "alwaysShowStatus": true,
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "linterOptions": {
+    "typeCheck": true,
+    "exclude": [
+      "./node_modules/**/*"
+    ]
+  },
+  "rules": {
+    "adjacent-overload-signatures": true,
+    "member-access": true,
+    "no-any": false,
+    "no-empty-interface": false,
+    "no-reference": false,
+    "only-arrow-functions": false,
+    "curly": true, 
+    "no-var-keyword": true,
+    "forin": false,
+    "no-arg": true,
+    "no-console": [
+      false,
+      "log",
+      "debugger"
+    ],
+    "no-construct": true,
+    "no-debugger": false,
+    "no-duplicate-super": true,
+    "no-duplicate-switch-case": true,
+    "no-empty": false,
+    "no-eval": true,
+    "no-floating-promises": true,
+    "no-for-in-array": true,
+    "no-string-literal": true,
+    "switch-default": true,
+    "triple-equals": true,
+    "deprecation": {
+      "severity": "warning"
+    },
+    "no-duplicate-imports": true,
+    "no-require-imports": true,
+    "ordered-imports": {
+      "options": [
+        {
+          "import-sources-order": "lowercase-last",
+          "named-imports-order": "lowercase-first"
+        }
+      ],
+      "severity": "warning"
+    },
+    "prefer-const": true,
+    "interface-name": true,
+  
+    "no-extra-semicolon":false,
+    "cognitive-complexity": false,
+    "no-element-overwrite": false,
+    "no-commented-code":false,
+    "max-union-size": false,
+    "no-big-function":[
+      true,
+      200
+    ],
+    "align": false,
+    "one-line": false,
+    "indent":false,
+    "quotemark":false,
+    "whitespace":false,
+    "trailing-comma":false,
+    "no-unused-expression":true,
+    "semicolon": false,
+    "eofline": false,
+    "comment-format": false,
+    "object-literal-shorthand": false,
+    "object-literal-sort-keys": false,
+    "jsdoc-format": false,
+    "max-line-length": false,
+    "member-ordering": false,
+    "no-trailing-whitespace": false,
+    "typedef-whitespace": false,
+    "class-name": false,
+    "one-variable-per-declaration":false,
+    "prefer-for-of": false,
+    "space-before-function-paren": false,
+    "no-angle-bracker-type-assertion": false,
+    "interface-over-type-literal": false,
+    "no-namespace": false,
+    "variable-name":false,
+    "radix":false,
+    "ban-types":false,
+    "no-consecutive-blank-lines":false,
+    "unified-signatures":false,
+    "arrow-parens":false,
+    "no-shadowed-variable":false,
+    "no-duplicate-string":false,
+    "object-literal-key-quotes":false,
+    "use-type-alias":false,
+    "no-redundant-boolean":false,
+    "max-classes-per-file": false
+
+  },
+  "rulesDirectory": [],
+  "enable": true
+}

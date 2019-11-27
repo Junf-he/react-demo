@@ -1,0 +1,9 @@
+{
+    "/testJson/{*}/{*}": "test.json",
+    "/testObject/abc": {
+        "a=1&b=2": "test.json"
+    },
+    "/testJson/:id": "test.json",
+    "/api/todos/list": "todos.json",
+    "/webbuilder/server/api/mock/list": "dataUrl.json"
+}

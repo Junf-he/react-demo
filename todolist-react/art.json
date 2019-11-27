@@ -1,0 +1,15 @@
+{
+    "urlPrefix": "/test/",
+    "devserver": {
+        "port": 8892
+    },
+    "rulesInclude": [
+        "./node_modules/"
+    ],
+    "alias": {
+        "@components": "./src/components/",
+        "@common": "./src/common/",
+        "@interfaces": "./typings/"
+    },
+    "version": "2.2.1"
+}

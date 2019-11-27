@@ -1,0 +1,25 @@
+{
+    "returnCode": "0",
+    "returnMessage": "ok",
+    "bean": {
+        "total": 2
+    },
+    "beans": [
+        {
+            "id": "person",
+            "name": "登陆接口",
+            "url": "api/v1/login",
+            "reqParam": "qaz",
+            "method": "get",
+            "source": "{\"message\": \"\",\"beans\": [{}]}"
+        },
+        {
+            "id": "shop",
+            "name": "登陆接口",
+            "url": "api/v2/login",
+            "method": "post",
+            "reqParam": "{\"user\": \"ls\",\"pwd\": \"2wsx@WSX\"}",
+            "source": "{\"message\": \"\",\"beans\": [{}]}"
+        }
+    ]
+}

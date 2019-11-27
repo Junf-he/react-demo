@@ -1,0 +1,110 @@
+{
+  "name": "webbuilder",
+  "version": "1.0.0",
+  "description": "前端可视化工具",
+  "files": [
+    "src/",
+    "build/",
+    "public/",
+    "tests/",
+    "_gitignore",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc"
+  ],
+  "devDependencies": {
+    "@types/react-redux": "6.0.9",
+    "@types/react-router-dom": "4.3.1"
+  },
+  "dependencies": {
+    "@types/enzyme-adapter-react-16": "1.0.3",
+    "@types/jest": "22.1.1",
+    "@types/react": "16.7.7",
+    "@types/react-dom": "16.0.10",
+    "ansi-styles": "^4.0.0",
+    "antd": "^3.21.1",
+    "art-ajax": "2.2.1",
+    "art-crypto": "2.2.1",
+    "art-pollyfill": "2.2.0",
+    "art-skin-loader": "0.0.1",
+    "art-util": "2.2.0",
+    "axios": "0.19.0",
+    "chalk": "2.4.1",
+    "clean-webpack-plugin": "0.1.19",
+    "commander": "2.17.1",
+    "copy-webpack-plugin": "4.5.3",
+    "create-react-class": "15.6.3",
+    "css-loader": "1.0.0",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.5.0",
+    "escape-string-regexp": "^2.0.0",
+    "eslint": "5.8.0",
+    "file-loader": "2.0.0",
+    "fork-ts-checker-webpack-plugin": "0.4.9",
+    "happypack": "5.0.0",
+    "html-loader": "0.5.5",
+    "html-webpack-plugin": "3.2.0",
+    "jest": "22.1.4",
+    "mini-css-extract-plugin": "0.4.2",
+    "mockjs": "1.0.0",
+    "node-sass": "4.9.3",
+    "null-loader": "2.0.0",
+    "react": "16.5.0",
+    "react-dom": "16.5.0",
+    "react-redux": "5.0.7",
+    "react-router": "4.3.1",
+    "react-router-dom": "4.3.1",
+    "redux": "4.0.0",
+    "redux-thunk": "2.2.0",
+    "sass-loader": "7.1.0",
+    "supports-color": "^7.0.0",
+    "ts-jest": "22.0.2",
+    "ts-loader": "5.1.1",
+    "tslib": "1.9.3",
+    "tslint": "5.11.0",
+    "tslint-sonarts": "1.8.0",
+    "typescript": "3.0.1",
+    "uglifyjs-webpack-plugin": "2.0.1",
+    "url-loader": "1.1.1",
+    "webpack": "^4.37.0",
+    "webpack-cli": "3.1.0",
+    "webpack-dev-server": "3.1.5",
+    "webpack-merge": "4.1.4",
+    "webpack-simple-progress-plugin": "0.0.4"
+  },
+  "scripts": {
+    "start": "node ./node_modules/art-cli/bin/art-cli.js webServer",
+    "dll": "art-cli dll"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "buildConfig": {
+    "theme": "../src/assets/skin/",
+    "entry": {
+      "index": "./src/apps/index/index.js",
+      "workbend": "./src/apps/workbend/index.js"
+    },
+    "localization": false
+  },
+  "scaffoldConfig": {
+    "builder": "ice-scripts",
+    "name": "ice-design-pro",
+    "title": "ICE Design Pro",
+    "categories": [
+      "基础模板"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "title": "webbuilder",
+  "main": "jest.config.js",
+  "repository": {
+    "type": "git",
+    "url": "http://172.18.255.251/duanjingfei/artFrontFrame.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
