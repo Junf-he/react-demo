@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrapper {
+  position: relative;
+  left: 50%;
+  top: 130px;
+  margin-left: -275px;
+  width: 550px;
+  height: 420px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+      0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .head .alltick {
+  width: 45px;
+  height: 65px;
+  background: url(./images/1.png);
+  border: 0;
+}
+
+.wrapper .head ._alltick {
+  width: 45px;
+  height: 65px;
+  background: url(./images/2.png);
+  border: 0;
+}
+
+.wrapper .head h1 {
+  position: absolute;
+  top: -135px;
+  width: 100%;
+  font-size: 100px;
+  font-weight: 100;
+  text-align: center;
+  color: rgba(175, 47, 47, 0.15);
+}
+
+.wrapper .head input {
+  padding: 16px 16px 16px 60px;
+  border: none;
+  padding-left: 15px;
+  background: rgba(0, 0, 0, 0.003);
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.003);
+  position: absolute;
+  width: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  box-sizing: border-box;
+}
+
+.wrapper .head input:focus {
+  outline: none;
+}
+
+.wrapper .head input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.wrapper .list {
+  position: relative;
+  top: 0px;
+  left: 0;
+}
+
+.wrapper .list ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+}
+
+.wrapper .list ul .listyle {
+  width: 550px;
+  height: 40px;
+  font-size: 24px;
+  color: #4d4d4d;
+  box-sizing: border-box;
+  display: block;
+}
+
+.wrapper .list ul .listyle .check {
+  width: 40px;
+  height: 40px;
+  border: 0;
+}
+
+.wrapper .list ul .listyle .tick {
+  width: 40px;
+  height: 40px;
+  background: url(./images/3.png);
+  background-repeat: no-repeat;
+  border: 0;
+  margin-left: -40px;
+  display: inline-block;
+}
+
+.wrapper .list ul .listyle ._tick {
+  width: 40px;
+  height: 40px;
+  background: url(./images/tick.svg);
+  background-repeat: no-repeat;
+  border: 0;
+  margin-left: -40px;
+  display: inline-block;
+}
+
+.wrapper .list ul .listyle .toggle {
+  position: absolute;
+  right: 0;
+  height: 40px;
+  width: 510px;
+  border: 0;
+  padding-left: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-size: 24px;
+  color: #4d4d4d;
+  font-weight: 300;
+}
+
+.wrapper .list ul .listyle ._toggle {
+  position: absolute;
+  right: 0;
+  height: 40px;
+  width: 510px;
+  border: 0;
+  padding-left: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-size: 24px;
+  color: #d9d9d9;
+  font-weight: 300;
+  text-decoration: line-through;
+}
+
+.wrapper .list ul .listyle .toggle:hover {
+  cursor: default;
+}
+
+.wrapper .list ul .listyle .toggle:focus {
+  outline-color: #777;
+  cursor: text;
+}
+
+.wrapper .list ul .listyle .destroy {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  font-weight: 400;
+  box-sizing: border-box;
+  font-size: 24px;
+  color: #fff;
+  background: none;
+}
+
+.wrapper .list ul .listyle .destroy:after {
+  content: '×';
+}
+
+.wrapper .list ul .listyle .destroy:hover {
+  color: #cc9a9a;
+}
+
+.footer {
+  color: #777;
+  padding: 10px 15px;
+  height: 20px;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 20px;
+  font-weight: 300;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  overflow: hidden;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+      0 8px 0 -3px #f6f6f6,
+      0 9px 1px -3px rgba(0, 0, 0, 0.2),
+      0 16px 0 -6px #f6f6f6,
+      0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}
+
+.footer .count {
+  text-align: left;
+  float: left;
+}
+
+.footer .filter {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.footer .filter div {
+  border-color: rgba(175, 47, 47, 0.2);
+  color: inherit;
+  margin: 3px;
+  padding: 3px 7px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: #fff;
+  display: inline-block;
+}
+
+.footer .filter div:active {
+  border: none;
+}
+
+
+.footer .filter .active {
+  border-color: rgba(175, 47, 47, 0.2);
+  color: inherit;
+  margin: 3px;
+  padding: 3px 7px;
+  cursor: pointer;
+  border: 1px solid rgba(175, 47, 47, 0.2);
+  border-radius: 3px;
+  background: #fff;
+}
+
+.footer .clear {
+  top: 7px;
+  float: right;
+  position: relative;
+  text-decoration: none;
+  border: 0;
+  background: #fff;
+  color: inherit;
+  cursor: pointer;
+}
+
+.footer .clear:hover {
+  text-decoration: underline;
+}

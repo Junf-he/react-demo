@@ -1,0 +1,10 @@
+export const ADD_ITEMS = 'add_items';
+export const CHANGE_ITEM = 'change_item';
+export const DELETE_ITEM = 'delete_item';
+export const ALL_BTN = 'all_btn';
+export const ACTIVE_BTN = 'active_btn';
+export const COMPLETED_BTN = 'completed_btn';
+export const CHECK_BTN = 'check_btn';
+export const CLEAR_BTN = 'clear_btn';
+export const TICKALL_BTN = 'tickAll_btn';
+export const INIT_LIST_ACTION = 'init_list_action';

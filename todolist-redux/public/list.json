@@ -1,0 +1,14 @@
+[
+	{
+		"text": "张三",
+		"isCheck": false
+	},
+	{
+		"text": "李四",
+		"isCheck": true
+	},
+	{
+		"text": "王五",
+		"isCheck": true
+	}
+]
